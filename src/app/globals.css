@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Brand palette */
+  --forest: #0d2b1a;
+  --forest-light: #123a24;
+  --green: #1e6b4e;
+  --sage: #3e9e6f;
+  --cream: #eef4ee;
+
+  /* Semantic tokens — light mode values */
+  --bg: var(--cream);
+  --bg-elevated: #ffffff;
+  --fg: var(--forest);
+  --fg-muted: #3f5b4a;
+  --accent: var(--green);
+  --accent-hover: var(--sage);
+  --border: rgba(13, 43, 26, 0.12);
+  --card: #ffffff;
+}
+
+.dark {
+  --bg: var(--forest);
+  --bg-elevated: var(--forest-light);
+  --fg: var(--cream);
+  --fg-muted: #a9c4b4;
+  --accent: var(--sage);
+  --accent-hover: #57b380;
+  --border: rgba(238, 244, 238, 0.12);
+  --card: var(--forest-light);
+}
+
+@theme inline {
+  --color-forest: var(--forest);
+  --color-forest-light: var(--forest-light);
+  --color-green: var(--green);
+  --color-sage: var(--sage);
+  --color-cream: var(--cream);
+
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+  --color-card: var(--card);
+
+  --font-heading: var(--font-fraunces);
+  --font-body: var(--font-public-sans);
+  --font-mono: var(--font-plex-mono);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--sage);
+  color: var(--forest);
+}
+
+/* Custom scrollbar, restrained */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
