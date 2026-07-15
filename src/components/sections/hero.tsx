@@ -54,7 +54,7 @@ export function Hero() {
             className="mt-6 max-w-lg text-balance text-lg leading-relaxed text-fg-muted"
           >
             I turn messy spreadsheets into reliable pipelines, and rough ideas
-            into shipped products — three-plus years in analytics at EY and
+            into shipped products — 5+ years in analytics at EY and
             PwC, now building data engineering systems on Azure and
             Databricks.
           </motion.p>

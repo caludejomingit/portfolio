@@ -3,7 +3,7 @@ import { GrowthMark } from "@/components/illustrations/growth-mark";
 
 const education = [
   {
-    degree: "MCA, Data Science — Distinction",
+    degree: "MCA, Data Science",
     school: "Marian College, Kuttikkanam",
   },
   {
@@ -29,7 +29,7 @@ export function About() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-4 text-balance font-heading text-3xl font-medium leading-tight text-fg sm:text-4xl">
-              Three-plus years turning raw data into decisions — now building
+              5+ years turning raw data into decisions — now building
               the pipelines that feed them.
             </h2>
           </Reveal>
@@ -37,7 +37,7 @@ export function About() {
           <Reveal delay={0.16}>
             <div className="mt-6 space-y-4 text-balance leading-relaxed text-fg-muted">
               <p>
-                I&apos;ve spent the last three-plus years as a data analyst
+                I&apos;ve spent the last 5+ years as a data analyst
                 at EY and PwC, working across Alteryx, Power BI, Excel, and
                 SQL to turn client data into decisions that hold up under
                 scrutiny.
@@ -64,18 +64,18 @@ export function About() {
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-muted">
                 Education
               </p>
-              <ul className="mt-4 space-y-4">
+              <ul className="relative mt-6 space-y-6 border-l border-border pl-6">
                 {education.map((e) => (
-                  <li
-                    key={e.degree}
-                    className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-3"
-                  >
-                    <span className="font-heading text-lg text-fg">
+                  <li key={e.degree} className="group relative">
+                    <span
+                      className="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-bg-elevated transition-colors group-hover:bg-accent"
+                    />
+                    <span className="font-heading text-xl text-fg">
                       {e.degree}
                     </span>
-                    <span className="font-mono text-xs text-fg-muted">
+                    <div className="mt-1 font-mono text-xs uppercase tracking-wider text-fg-muted">
                       {e.school}
-                    </span>
+                    </div>
                   </li>
                 ))}
               </ul>
