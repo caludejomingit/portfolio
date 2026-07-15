@@ -39,7 +39,7 @@ export default function OpengraphImage() {
             maxWidth: 950,
           }}
         >
-          Senior Data Analyst → Data Engineer
+          Data Analyst → Data Engineer
         </span>
         <span
           style={{

@@ -41,7 +41,7 @@ export function Hero() {
             variants={item}
             className="mt-4 text-balance font-heading text-4xl font-medium leading-[1.08] tracking-tight text-fg sm:text-5xl lg:text-[3.4rem]"
           >
-            Senior Data Analyst{" "}
+            Data Analyst{" "}
             <span className="text-accent">→</span> Data Engineer.
             <br />
             Freelance data{" "}

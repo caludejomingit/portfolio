@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s — Jomin George Attayil",
   },
   description:
-    "Senior Data Analyst transitioning into Data Engineering. Freelance data visualization, app development, and web craft under @thinkwithjomin.",
+    "Data Analyst transitioning into Data Engineering. Freelance data visualization, app development, and web craft under @thinkwithjomin.",
   keywords: [
     "Jomin George Attayil",
     "Data Analyst",
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Jomin George Attayil — Data Analyst → Data Engineer",
     description:
-      "Senior Data Analyst transitioning into Data Engineering. Freelance data visualization, app development, and web craft under @thinkwithjomin.",
+      "Data Analyst transitioning into Data Engineering. Freelance data visualization, app development, and web craft under @thinkwithjomin.",
     siteName: "Jomin George Attayil",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jomin George Attayil — Data Analyst → Data Engineer",
     description:
-      "Senior Data Analyst transitioning into Data Engineering. Freelance data visualization, app development, and web craft under @thinkwithjomin.",
+      "Data Analyst transitioning into Data Engineering. Freelance data visualization, app development, and web craft under @thinkwithjomin.",
   },
 };
 
@@ -65,11 +65,9 @@ const themeInitScript = `
 (function () {
   try {
     var stored = localStorage.getItem('theme');
-    var isLight = stored === 'light';
-    document.documentElement.classList.toggle('dark', !isLight);
-  } catch (e) {
-    document.documentElement.classList.add('dark');
-  }
+    var isDark = stored === 'dark';
+    document.documentElement.classList.toggle('dark', isDark);
+  } catch (e) {}
 })();
 `;
 
@@ -81,7 +79,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${fraunces.variable} ${publicSans.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${publicSans.variable} ${plexMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>

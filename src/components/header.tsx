@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
+import { LogoMark } from "./illustrations/logo-mark";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -18,11 +19,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-        <a
-          href="#top"
-          className="font-mono text-sm font-medium tracking-tight text-fg"
-        >
-          jomin<span className="text-accent">.</span>ga
+        <a href="#top" aria-label="Jomin George Attayil — home">
+          <LogoMark className="h-9 w-9 transition-transform hover:scale-105" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

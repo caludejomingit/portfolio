@@ -118,9 +118,6 @@ export function Contact() {
               Send Message
               <span aria-hidden="true">→</span>
             </button>
-            <p className="text-center font-mono text-[11px] text-fg-muted">
-              Opens your email client with this pre-filled.
-            </p>
           </form>
         </Reveal>
       </div>

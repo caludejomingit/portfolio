@@ -27,7 +27,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border px-6 py-4 text-center font-mono text-[11px] text-fg-muted md:px-10">
-        © {new Date().getFullYear()} Jomin George Attayil. Built with Next.js.
+        © {new Date().getFullYear()} Jomin George Attayil.
       </div>
     </footer>
   );
